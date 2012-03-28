@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Spec Runner</title>
+<script>
+// var dojoCdnPath = "http://ajax.googleapis.com/ajax/libs/dojo/1.7.2";
+// var dojoDebugPath = "http://svn.dojotoolkit.org/src/tags/release-1.7.2";
+dojoConfig = {
+        isDebug: true,
+        has: {
+            "dojo-firebug": true,
+            "dojo-debug-messages": true
+        },
+        selectorEngine:'css3',
+        parseOnLoad: false,
+        paths: {
+            "unittests": "/test/unittests",
+            "utils": "/test/utils"
+        },
+        packagePaths:{
+            "http://ajax.googleapis.com/ajax/libs/dojo/1.7.2":["dojo","dojox","dijit"],
+            "/src":["angular", "nlp"],
+        },        
+        async: true
+    };
+</script>
+    <!-- debug version...
+    <script src="http://svn.dojotoolkit.org/src/tags/release-1.7.2/dojo/dojo.js"></script>
+    -->
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.2/dojo/dojo.js"></script>
+	<script src="utils/testsupport.js"></script>
+	<script src="jasmine/jasmine.js"></script>
+	<script src="utils/mock-xhr.js"></script>
+	<script src="jasmine/jasmine-html.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="jasmine/jasmine.css"></link>
+    
+    <script src="/src/main.js"></script>
+    <script src="unittests/unittests.js"></script>
+    
+</head>
+<body>
+</body>
+</html>
