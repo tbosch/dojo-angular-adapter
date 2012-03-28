@@ -1,0 +1,82 @@
+@import "dojo/resources/dojo.css";
+@import "dijit/themes/claro/claro.css";
+@import "dojox/grid/resources/Grid.css";
+@import "dojox/grid/resources/claroGrid.css";
+@import "dojox/drawing/resources/toolbar.css";
+
+
+html,body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+.claro .dojoxGrid.messages { border: none; }
+.messages .dojoxGridHeader { display:none; }
+.messages .dojoxGridMasterHeader { display:none; }
+
+.dojoxGridRow.error { border: 1px solid red; }
+
+#waiter{
+	display:block;
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	background-color: #eee;
+	height:100%;
+	width:100%;
+	text-align:center;
+	margin-left: auto ;
+  	margin-right: auto ;  	
+  	z-index: 9999;
+}
+#waiter img{
+	background-color: #eee;
+	margin-top: 200px;
+	margin-left: auto ;
+  	margin-right: auto ;
+	display: block;
+	height: 100px;
+	width: 100px;
+}
+
+#page{
+	display:none;
+	margin: none;
+	padding: none;
+	width:100%;
+	height:100%;
+}
+
+.top {
+	height: 50px;	
+}
+
+.main-title div {
+	padding-top:17px;
+	font-size: 16px;
+}
+
+.main-menu {
+	margin-top:0px;	
+}
+
+#main-user-info {
+	position: absolute;
+	top:0px;
+	right:0px;
+	margin: 10px;
+}
+.logout {
+	float: right;
+	margin-top: 50px;
+}
+
+.dirty .dojoxGridCell{
+	opacity:0.5;
+	filter:alpha(opacity=50);
+}

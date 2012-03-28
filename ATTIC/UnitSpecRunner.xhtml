@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Spec Runner</title>
+	<script src="${facesContext.externalContext.requestContextPath}/faces/javax.faces.resource/js/dojo/dojo.js"
+		data-dojo-config="async:1,selectorEngine:'css3'"></script>
+	<script
+		src="${facesContext.externalContext.requestContextPath}/faces/javax.faces.resource/js/utils/testsupport.js"></script>
+	<script src="${facesContext.externalContext.requestContextPath}/faces/javax.faces.resource/js/jasmine/jasmine.js"></script>
+	<script src="${facesContext.externalContext.requestContextPath}/faces/javax.faces.resource/js/utils/mock-xhr.js"></script>
+	<script src="${facesContext.externalContext.requestContextPath}/faces/javax.faces.resource/js/jasmine/jasmine-html.js"></script>
+	<script src="${facesContext.externalContext.requestContextPath}/faces/javax.faces.resource/js/jasmine/jsReporter.js" ></script>
+	
+	<link rel="stylesheet" type="text/css" href="${facesContext.externalContext.requestContextPath}/faces/javax.faces.resource/js/jasmine/jasmine.css"></link>
+
+</h:head>
+<h:body>
+	<f:verbatim>
+		<script>
+			require(${javascriptTestCollector.unitTestsAsJsonList}, function() {
+				//jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+				//jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+				jasmine.getEnv().execute();
+			});
+		</script>
+	</f:verbatim>
+
+</h:body>
+</html>
